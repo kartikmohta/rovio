@@ -127,6 +127,8 @@ int main(int argc, char** argv){
       if (imgMsg != NULL) rovioNode.imgCallback1(imgMsg);
     }
     ros::spinOnce();
+    if(!ros::ok())
+      break;
   }
 
   bag.close();
